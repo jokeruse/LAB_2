@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/*
+ * $Id: struts-plugin.xml 722219 2008-12-01 20:41:26Z musachy $
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+-->
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>   
+		<package name="strust2"  extends="struts-default">
+		
+		<action name="search" method="showbooks" class="action.authoraction">
+			<result>
+				showbook.jsp
+			</result>
+		</action>
+		
+		<action name="fileUpload"  class="action.authoraction">
+			<result>
+				removesuccess.jsp
+			</result>
+		</action>
+		
+		<action name="update" method="load" class="action.bookaction">
+			<result>
+				update.jsp
+			</result>
+		</action>
+		
+		<action name="allbook" method="list" class="action.bookaction">
+			<result>
+				allbook.jsp
+			</result>
+		</action>
+		
+		<action name="show" method="load" class="action.bookaction">
+			<result>
+				show.jsp
+			</result>
+		</action>
+		
+		<action name="remove" method="remove" class="action.bookaction">
+			<result>
+				removesuccess.jsp
+			</result>
+		</action>
+		
+		<action name="addbook" method="addbook" class="action.bookaction">
+			<result name = "Add_author">
+				Add_author.jsp
+			</result>
+			<result>
+				updatasuccess.jsp
+			</result>
+		</action>
+		
+		<action name="updatabook" method="updatabook" class="action.bookaction">
+			<result name = "Add_author">
+				up_author.jsp
+			</result>
+			<result>
+				updatasuccess.jsp
+			</result>
+		</action>
+		
+		<action name="addauthor" method="addauthor" class="action.bookaction">
+			<result >
+				addsuccess.jsp
+			</result>
+		</action>
+		
+		
+		<action name="upauthor" method="upauthor" class="action.bookaction">
+			<result >
+				updatasuccess.jsp
+			</result>
+		</action>
+		
+	</package>
+</struts>
